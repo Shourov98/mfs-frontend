@@ -80,8 +80,8 @@ frontend/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/digital-wallet-frontend.git
-cd digital-wallet-frontend
+git clone https://github.com/Shourov98/mfs-frontend.git
+cd mfs-frontend
 ````
 
 ### 2. Install dependencies
