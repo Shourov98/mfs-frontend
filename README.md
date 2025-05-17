@@ -2,7 +2,7 @@ Absolutely! Here's a professional and comprehensive `README.md` for your fronten
 
 
 
-# Digital Wallet Frontend
+# Mobile Finance Service Frontend
 
 This is the frontend client for a digital wallet web application built with **Next.js**, **Redux Toolkit**, and **Tailwind CSS**. It supports three types of users: **User**, **Agent**, and **Admin**, each with a custom dashboard and role-based functionalities like money transfer, cash-in/out, transaction history, and user management.
 
@@ -142,6 +142,4 @@ This project is licensed under the MIT License.
 ```
 
 ---
-
-Let me know if you want a `README.md` version for the backend too!
 ```
