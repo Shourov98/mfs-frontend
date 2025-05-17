@@ -1,36 +1,149 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Absolutely! Here's a professional and comprehensive `README.md` for your frontend project:
 
-## Getting Started
+---
 
-First, run the development server:
+```md
+# Digital Wallet Frontend
+
+This is the frontend client for a digital wallet web application built with **Next.js**, **Redux Toolkit**, and **Tailwind CSS**. It supports three types of users: **User**, **Agent**, and **Admin**, each with a custom dashboard and role-based functionalities like money transfer, cash-in/out, transaction history, and user management.
+
+---
+
+## 🧱 Tech Stack
+
+- **Next.js 14** (App Router, Client Components)
+- **Redux Toolkit** (Global state management)
+- **Axios** (API communication)
+- **Zod** (Schema validation)
+- **Sonner** (Toast notifications)
+- **Shadcn UI** (Reusable UI components with Tailwind)
+- **Tailwind CSS** (Utility-first styling)
+- **ESLint + Prettier** (Linting and formatting)
+
+---
+
+## 📂 Project Structure
+
+```
+
+frontend/
+├── api/                   # Axios-based API calls
+│   ├── authApi.js
+│   ├── transactionApi.js
+│   ├── agentApi.js
+│   └── adminApi.js
+├── app/                   # Next.js app router pages
+│   ├── dashboard/
+│   ├── login/
+│   ├── register/
+│   └── layout.js
+├── components/            # Reusable UI and feature components
+│   ├── auth/
+│   ├── dashboard/
+│   ├── modals/
+│   ├── profile/
+│   ├── shared/
+│   ├── top/
+│   └── ui/
+├── lib/                   # Redux slices and store setup
+│   ├── authSlice.js
+│   ├── transactionSlice.js
+│   ├── adminSlice.js
+│   └── store.js
+├── public/                # Static assets
+├── utils/                 # Helpers and schemas
+│   ├── toast.js
+│   └── zodSchemas.js
+├── .env.local             # API base URL
+└── README.md
+
+````
+
+---
+
+## 🔄 Data Flow
+
+1. **User Registration/Login:**
+   - Auth form → Redux thunk → `authApi.js` → Backend
+   - On success: store `user` and `token` in Redux
+
+2. **Authenticated Requests:**
+   - Components access the token via Redux
+   - Thunks dispatch actions for balance, transactions, admin tasks
+
+3. **Modals & Dashboards:**
+   - Role-specific dashboards render modals for Send Money, Cash In/Out
+   - Admin tabs fetch user/agent request lists lazily via Redux thunks
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/digital-wallet-frontend.git
+cd digital-wallet-frontend
+````
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure environment variables
+
+Create a `.env.local` file in the root and add your backend URL:
+
+```
+NEXT_PUBLIC_API_BASE_URL=http://localhost:5000
+```
+
+### 4. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Now open [http://localhost:3000](http://localhost:3000) to see the app in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧪 Features Covered
 
-## Learn More
+* ✅ User & Agent registration/login
+* ✅ Role-based dashboard routing
+* ✅ Send Money, Cash In, Cash Out modals
+* ✅ View transaction history
+* ✅ View balance securely
+* ✅ Admin approval workflows
+* ✅ Block/unblock users
+* ✅ Modular, scalable architecture
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📌 Notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* The backend should be running on the same machine or configured via `NEXT_PUBLIC_API_BASE_URL`.
+* Admin actions (approve/reject/unblock) require valid tokens.
+* Use Redux DevTools for debugging the store.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🤝 Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Feel free to fork the repo, open issues, or create PRs. Let’s improve this project together!
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+```
+
+---
+
+Let me know if you want a `README.md` version for the backend too!
+```
